@@ -12,11 +12,16 @@ class Database implements DatabaseInterface{
 
     function __construct()
     {
-        // Create Database if not exist
+        // Create DATABASE and TABLES if not exist
         try{
             $this->pdo = new PDO("mysql:host=$this->hostname", $this->username, $this->password);
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $this->pdo->exec("CREATE DATABASE IF NOT EXISTS `$this->dbName`;");
+            $this->pdo->exec("CREATE DATABASE IF NOT EXISTS `$this->dbName`;
+                                        USE `$this->dbName`;
+                                        CREATE TABLE IF NOT EXISTS user(user_id SMALLINT(5) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+                                                          name CHAR(32) NOT NULL,
+                                                          surname CHAR(32) NOT NULL,
+                                                          email CHAR(32) NOT NULL);");
         } catch (PDOException $e){
             echo "Error:" + $e->getMessage();
         }
