@@ -1,8 +1,7 @@
 <?php
-include 'Database.php';
-$db = new Database();
+include('application/core/Logger.php');
+$log = new Logger("log");
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,6 +41,17 @@ $db = new Database();
                 <button type="submit" class="btn btn-primary btn-group-xs" onclick="saveData()">Ok</button>
             </form>
         </div>
+    </div>
+</div>
+
+
+<div class="fixed-bottom">
+    <div class="w-100 p-3 mb-2 bg-primary text-white d-flex justify-content-center">
+
+        <?php
+        $log->get_draftcommands();
+
+        ?>
     </div>
 </div>
 <script>
