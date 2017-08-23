@@ -22,6 +22,7 @@ $log = new Logger("log");
         <a class="navbar-brand" href="#">CRUD</a>
     </nav>
 
+    <form action="" method="post">
     <div class="row col-sm-8">
         <div class="col-sm-4">
             <form>
@@ -31,7 +32,7 @@ $log = new Logger("log");
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Surname</label>
-                    <input type="email" class="form-control" id="inputSurname" placeholder="Surname">
+                    <input class="form-control" id="inputSurname" placeholder="Surname">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Email</label>
@@ -42,6 +43,7 @@ $log = new Logger("log");
             </form>
         </div>
     </div>
+    </form>
 </div>
 
 
@@ -50,7 +52,6 @@ $log = new Logger("log");
 
         <?php
         $log->get_draftcommands();
-
         ?>
     </div>
 </div>

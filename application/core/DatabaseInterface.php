@@ -1,9 +1,9 @@
 <?php
 
 Interface DatabaseInterface{
-    public function create();
-    public function read();
-    public function update();
-    public function delete();
+    public function create($n, $s, $em);
+    public function read($n, $s, $em);
+    public function update($n, $s, $em);
+    public function delete($n, $s, $em);
 }
 ?>

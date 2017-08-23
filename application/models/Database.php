@@ -1,8 +1,7 @@
 <?php
-require_once 'DatabaseInterface.php';
 
-class Database implements DatabaseInterface{
-// Create and manipulation with database
+class Database implements DatabaseInterface
+{// Create and manipulation with database
 
     private $hostname = 'localhost',
             $dbName = 'simplecrudDB',
@@ -27,16 +26,18 @@ class Database implements DatabaseInterface{
         }
     }
 
-    public function create(){
+    public function create($n, $s, $em)
+    {
         return null;
     }
-    public function read(){
+    public function read($n, $s, $em)
+    {
         return null;
     }
-    public function update(){
+    public function update($n, $s, $em){
         return null;
     }
-    public function delete(){
+    public function delete($n, $s, $em){
         return null;
     }
 

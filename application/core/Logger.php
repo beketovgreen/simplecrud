@@ -17,7 +17,7 @@ class Logger
 
     public function get_draftcommands()
     {
-        $this->output_template($_SERVER['REQUEST_URI']);
+        $this->output_template(var_dump($_POST));
     }
 
 }
