@@ -8,9 +8,15 @@ class Model implements DatabaseInterface
         $password = 1,
         $pdo;
 
+
     function __construct()
     {
         $this->createDatabse();
+        $this->logManage();
+    }
+
+    private function logManage(){
+        new Logger("log");
     }
 
     private function createDatabse()
@@ -29,7 +35,6 @@ class Model implements DatabaseInterface
             echo "Error:" + $e->getMessage();
         }
     }
-
     public function create($n, $s, $em)
     {
         $this->pdo->exec("INSERT INTO `user` VALUES($n, $s, $em)");
@@ -41,6 +46,7 @@ class Model implements DatabaseInterface
     public function update($n, $s, $em){
         return null;
     }
+
     public function delete($n, $s, $em){
         return null;
     }
@@ -48,5 +54,6 @@ class Model implements DatabaseInterface
     function __destruct()
     {
     }
+
 }
 ?>

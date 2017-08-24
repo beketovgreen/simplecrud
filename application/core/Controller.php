@@ -1,5 +1,14 @@
 <?php
-Interface Controller{
-    function getAction();
+class Controller{
+
+    protected $model;
+
+    function __construct()
+    {
+        $this->model = new Model();
+    }
+
+    function getAction(){
+    }
 }
 ?>

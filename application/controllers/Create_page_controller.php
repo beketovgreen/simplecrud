@@ -1,12 +1,10 @@
 <?php
 
-class CreatePageController implements Controller
+class CreatePageController extends Controller
 {
-    private $model;
-
     function __construct()
     {
-        $this->model = new Model();
+
     }
 
     function getAction()

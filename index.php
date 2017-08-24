@@ -1,6 +1,5 @@
 <?php
-include('application/core/Logger.php');
-$log = new Logger("log");
+include('application/core/Starter.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,16 +48,8 @@ $log = new Logger("log");
 
 <div class="fixed-bottom">
     <div class="w-100 p-3 mb-2 bg-primary text-white d-flex justify-content-center">
-
         <?php
-        //$log->get_draftcommands();
-        if (!empty($_POST))
-        {
-            var_dump($_POST);
-        }
-        else {
-            echo "post is empty";
-        }
+
         ?>
     </div>
 </div>
@@ -85,4 +76,8 @@ $log = new Logger("log");
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
 </body>
+
+<?php
+$s = new Starter;
+?>
 

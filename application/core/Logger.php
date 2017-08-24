@@ -9,15 +9,14 @@ class Logger
         $this->log = $log;
     }
 
-    private function output_template($content){
-        echo "$this->log: "."\n";
-        echo "$content\n";
+    private function contentLog($content){
 
+        echo "LOG: $content\n";
     }
 
-    public function get_draftcommands()
+    public static function getLog()
     {
-        $this->output_template(var_dump($_POST));
+
     }
 
 }
